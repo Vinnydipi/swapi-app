@@ -1,0 +1,28 @@
+.login-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 280px;
+  border-radius: 20px;
+  border: 2px solid #FFBA08;
+}
+
+.card {
+  position: relative;
+  margin: 20px auto;
+  min-width: 200px;
+  max-width: 95%;
+  background-color: #032B43;
+  overflow-x: auto;
+}
+
+.SearchApiContainer {
+  display: flex;
+  justify-content: center;
+  
+}

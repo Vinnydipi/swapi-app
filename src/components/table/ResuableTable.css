@@ -1,0 +1,56 @@
+.table-container {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.resuable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resuable-table th,
+.resuable-table td {
+  padding: 10px 15px; /* Add padding for cell content */
+  border: 2px solid #3F88CF; /* Add borders between cells */
+  text-align: center; /* Center-align cell content */
+}
+
+.resuable-table th {
+  font-size: 20px;
+  position: sticky;
+  background-color: #3F88CF;
+  width: 100px;
+  white-space: normal;
+  color: #032B43;
+}
+
+.resuable-table td {
+  color: #FFBA08;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: normal;
+  min-width: fit-content;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Add hover effect on table rows */
+.resuable-table tr:hover {
+  background-color: #136F63;
+}
+
+/* Width and height for the scrollbar track */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Styles for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #FFBA08;
+  border-radius: 5px;
+}
+
+/* Styles for the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

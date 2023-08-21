@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// Redux
+import { Provider } from 'react-redux';
+import store from './store/reduxStore';
+// Pages
+import Layout from './pages/Layout';
+import Login from './pages/Login';
+import Planets from './pages/Planets';
+import HomePage from './pages/Home';
+import Starships from './pages/Starships';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />, // Use PreLoginLayout for this route
+    children: [
+      { path: '/', element: <Login /> }, 
+      { path: 'home', element: <HomePage /> },
+      { path: 'planets', element: <Planets /> },
+      { path: 'starships', element: <Starships />}
+    ],
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 
